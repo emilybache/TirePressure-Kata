@@ -9,7 +9,7 @@ class Alarm
 {
 public:
     Alarm();
-    void check(const std::function<double(Alarm *)> &getPressureLambda);
+    void check();
     bool isAlarmOn();
 
 protected:
@@ -18,7 +18,7 @@ protected:
     double m_highPressureThreshold;
     bool m_alarmOn;
 
-    double getPressure();
+
 };
 
 

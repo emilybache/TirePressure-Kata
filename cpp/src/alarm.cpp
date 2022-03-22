@@ -15,8 +15,6 @@ void Alarm::check()
     }
 }
 
-double Alarm::getPressure() { return m_sensor.popNextPressurePsiValue(); }
-
 bool Alarm::isAlarmOn()
 {
     return m_alarmOn;
