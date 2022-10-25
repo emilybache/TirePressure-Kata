@@ -4,7 +4,7 @@
 
 using namespace std;
 
-  TEST(Alarm, Foo) {
-    auto alarm = new Alarm();
-    ASSERT_EQ(false, alarm->isAlarmOn());
-  }
+TEST(Alarm, AlarmIsOffByDefault) {
+    auto alarm = Alarm();
+    ASSERT_EQ(false, alarm.isAlarmOn());
+}

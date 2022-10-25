@@ -1,18 +1,20 @@
 
 
 #include "sensor.h"
+#include "iostream"
 
 #include <cstdlib>
-#include <time.h>
 
 Sensor::Sensor()
 {
-    srand((unsigned)time(0));
+    srand(time(NULL));
 }
 
 double Sensor::popNextPressurePsiValue()
 {
     // placeholder implementation that simulates a real sensor in a real tire
-    double pressure = 16 + (float)rand()/((float)RAND_MAX/(6));
+    float offset = (float) (rand() % 8);
+    //std::cout << "offset: " << offset << "\n";
+    double pressure = 15 + offset;
     return pressure;
 }

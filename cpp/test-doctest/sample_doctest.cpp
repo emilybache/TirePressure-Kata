@@ -3,9 +3,9 @@
 #include "alarm.h"
 
 
-TEST_CASE("Alarm [TirePressureMonitoring]") {
-    auto alarm = new Alarm();
-    REQUIRE(!alarm->isAlarmOn());
+TEST_CASE("Alarm is off by default") {
+    auto alarm = Alarm();
+    REQUIRE(!alarm.isAlarmOn());
 }
 
 
