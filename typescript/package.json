@@ -1,0 +1,21 @@
+{
+  "name": "tire-pressure-kata",
+  "version": "1.0.0",
+  "description": "split out from RacingCarKatas to make it simpler to get set up",
+  "private": true,
+  "devDependencies": {
+    "@types/jest": "^28.1.1",
+    "@typescript-eslint/eslint-plugin": "^5.27.0",
+    "@typescript-eslint/parser": "^5.27.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.26.0",
+    "ts-jest": "^29.1.1",
+    "ts-node": "^10.8.1",
+    "typescript": "^5.1.6"
+  },
+  "scripts": {
+    "test": "jest",
+    "lint": "eslint .",
+    "format": "eslint . --fix"
+  }
+}
