@@ -6,4 +6,4 @@ Write the unit tests for the Alarm class. The Alarm class is designed to monitor
 Acknowledgements
 ----------------
 
-This exercise was originally designed by Luca Minudel and is included in his repo [TDDwithMockObjectsAndDesignPrinciples](https://github.com/lucaminudel/TDDwithMockObjectsAndDesignPrinciples)
+This exercise was originally designed by Luca Minudel and is included in his repo [TDDwithMockObjectsAndDesignPrinciples](https://github.com/lucaminudel/TDDwithMockObjectsAndDesignPrinciples). See also the video I made about it: https://youtu.be/ldthYMeXSoI
