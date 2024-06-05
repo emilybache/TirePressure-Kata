@@ -7,7 +7,7 @@ public class Alarm {
 
     protected Sensor sensor = new Sensor();
 
-    boolean alarmOn = false;
+    private boolean alarmOn = false;
 
 
     public void check()
