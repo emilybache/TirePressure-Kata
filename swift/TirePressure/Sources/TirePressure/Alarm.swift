@@ -4,7 +4,7 @@ public class Alarm {
     private let lowPressureThreshold: Double = 17
     private let highPressureThreshold: Double = 21
 
-    let _sensor = Sensor()
+    private let _sensor = Sensor()
 
     private var _alarmOn = false
     private var _alarmCount = 0
