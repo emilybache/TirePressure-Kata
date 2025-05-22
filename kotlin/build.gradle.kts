@@ -1,7 +1,8 @@
+import org.jetbrains.kotlin.gradle.dsl.JvmTarget
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
-    kotlin("jvm") version "1.7.20"
+    kotlin("jvm") version "2.1.21"
 }
 
 group = "org.example"
@@ -11,19 +12,26 @@ repositories {
     mavenCentral()
 }
 
+java {
+    sourceCompatibility = JavaVersion.VERSION_21
+    targetCompatibility = JavaVersion.VERSION_21
+}
+
 dependencies {
-    implementation(kotlin("stdlib"))
-    testImplementation("org.junit.jupiter:junit-jupiter-api:5.9.0")
-    testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:5.9.0")
+    testImplementation(platform("org.junit:junit-bom:5.12.2"))
+    testImplementation("org.junit.jupiter:junit-jupiter")
+    testRuntimeOnly("org.junit.platform:junit-platform-launcher")
 }
 
-tasks.test {
-    useJUnitPlatform()
-    testLogging {
-        events("passed", "skipped", "failed")
+tasks {
+    test {
+        useJUnitPlatform()
+        testLogging {
+            events("passed", "skipped", "failed")
+        }
     }
-}
 
-tasks.withType<KotlinCompile>().configureEach {
-    kotlinOptions.jvmTarget = "1.8"
+    withType<KotlinCompile>().configureEach {
+        compilerOptions.jvmTarget = JvmTarget.JVM_21
+    }
 }
