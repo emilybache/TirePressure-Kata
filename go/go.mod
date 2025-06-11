@@ -1,4 +1,4 @@
-module github.com/emilybache/TirePressure-Kata/go
+module example.org
 
 go 1.22.3
 

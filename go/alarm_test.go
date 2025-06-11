@@ -3,7 +3,7 @@ package tirepressure_test
 import (
 	"testing"
 
-	tirepressure "github.com/emilybache/TirePressure-Kata/go"
+	tirepressure "example.org"
 	"github.com/stretchr/testify/assert"
 )
 
