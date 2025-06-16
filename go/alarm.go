@@ -1,26 +1,27 @@
 package tirepressure
 
+const (
+	lowPressureThreshold  float64 = 17
+	highPressureThreshold float64 = 21
+)
+
 type Alarm struct {
-	lowPressureThreshold  float64
-	highPressureThreshold float64
-
-	sensor *Sensor
-
+	sensor  *Sensor
 	alarmOn bool
 }
 
-func (a Alarm) check() {
-	psiPressureValue := a.sensor.popNextPressurePsiValue()
+func (a *Alarm) Check() {
+	psiPressureValue := a.sensor.PopNextPressurePsiValue()
 
-	if psiPressureValue < a.lowPressureThreshold || a.highPressureThreshold < psiPressureValue {
+	if psiPressureValue < lowPressureThreshold || highPressureThreshold < psiPressureValue {
 		a.alarmOn = true
 	}
 }
 
-func (a Alarm) isAlarmOn() bool {
+func (a Alarm) IsAlarmOn() bool {
 	return a.alarmOn
 }
 
 func NewAlarm() *Alarm {
-	return &Alarm{lowPressureThreshold: 17, highPressureThreshold: 21, sensor: NewSensor()}
+	return &Alarm{sensor: NewSensor()}
 }

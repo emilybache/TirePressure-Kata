@@ -1,14 +1,16 @@
-package tirepressure
+package tirepressure_test
 
 import (
-	"github.com/stretchr/testify/assert"
 	"testing"
+
+	tirepressure "example.org"
+	"github.com/stretchr/testify/assert"
 )
 
 func TestAlarm(t *testing.T) {
 	t.Run("alarm is off by default", func(t *testing.T) {
-		alarm := NewAlarm()
+		alarm := tirepressure.NewAlarm()
 
-		assert.False(t, alarm.isAlarmOn())
+		assert.False(t, alarm.IsAlarmOn())
 	})
 }
